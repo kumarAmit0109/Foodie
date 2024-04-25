@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie</title>
+    
+    <link rel="shortcut icon" href="/assets/favicon-ebba5d19.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" crossorigin src="/assets/index-332916c7.js"></script>
+    <link rel="stylesheet" href="/assets/index-e58c4a06.css">
+  </head>
+  <body class="overflow-hidden">
+    <!-- Wrapper -->
+
+    <div class="relative p-0 m-0 box-border overflow-x-hidden">
+      <div
+        class="w-full h-screen absolute inset-0 bg-white z-[100] flex flex-col justify-center items-center"
+        id="load"
+      >
+        <img src="/assets/loading-image-da834445.gif" alt="" />
+        <div class="text-3xl absolute top-[60%] font-bold tracking-wider">
+          Loading ...
+        </div>
+      </div>
+      <!-- Nav + Back -->
+      <div
+        class="w-full bg-[url('./Images/hero-Background.jpeg')] md:bg-[url('./Images/hero-BG3.png')] bg-cover bg-center bg-no-repeat relative"
+      >
+        <div class="navbar w-[100%]">
+          <!-- Navbar -->
+          <div
+            class="py-4 w-11/12 md:w-10/12 max-w-6xl mx-auto flex justify-between items-center text-white"
+          >
+            <!-- Navbar Left -->
+            <div class="">
+              <a
+                href="#"
+                class="nav-logo flex items-center text-[30px] font-bold"
+                >Foodie
+                <p class="text-[40px] font-bold text-yellow-500">.</p></a
+              >
+            </div>
+            <!-- Navbar Right -->
+            <div class="flex justify-around">
+              <div
+                class="hidden justify-around items-center pr-5 gap-x-2 md:flex"
+              >
+                <a href="#" class="nav-logo text-gray-300 font-semibold px-3"
+                  >Home</a
+                >
+                <a href="#" class="nav-logo text-gray-300 font-semibold px-3"
+                  >Shop</a
+                >
+                <a href="#" class="nav-logo text-gray-300 font-semibold px-3"
+                  >Contact Us</a
+                >
+              </div>
+              <div class="hidden justify-between items-center gap-x-3 sm:flex">
+                <button class="bg-yellow-500 py-2 px-8 rounded-sm">
+                  Log In
+                </button>
+                <button class="bg-yellow-500 py-2 px-8 rounded-sm">
+                  Sign Up
+                </button>
+              </div>
+              <!-- Bars and Cross -->
+              <div class="md:hidden mx-4 flex items-center">
+                <div class="" id="bars">
+                  <i class="fa-solid fa-bars text-2xl nav-logo"></i>
+                </div>
+                <div class="hidden" id="cross">
+                  <i class="fa-solid fa-xmark text-2xl nav-logo"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-[0.5px] bg-gray-300"></div>
+
+        <!-- Drop-Down Toggle Menu -->
+        <div
+          class="w-[96%] left-[2%] right-[2%] top-[92px] py-2 bg-white fixed z-10 scale-y-0 transition-all duration-300 origin-top flex flex-col justify-start rounded-b-lg"
+          id="menu"
+        >
+          <a
+            href="#"
+            class="text-black font-semibold px-3 py-5 border-b-[0.5px]"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-black font-semibold px-3 py-5 border-b-[0.5px]"
+            >Shop</a
+          >
+          <a href="#" class="text-black font-semibold px-3 py-5">Contact Us</a>
+        </div>
+
+        <!-- Hero Section -->
+
+        <div
+          class="w-11/12 md:w-10/12 max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center mx-auto py-[5%]"
+        >
+          <!-- Hero Left -->
+          <div class="flex flex-col items-center md:items-start gap-y-2">
+            <p
+              class="text-[2rem] lg:text-[3rem] text-yellow-600 text-center md:text-left"
+              style="font-family: 'Cedarville Cursive', cursive"
+            >
+              Eat Sleep And
+            </p>
+            <p
+              class="lg:text-[4rem] text-[#e7c8cd] font-bold leading-tight text-center md:text-left md:text-[3rem] text-[2rem]"
+            >
+              Supper delicious Burger in town!
+            </p>
+            <p class="text-[20px] text-[#e7c8cd] text-center md:text-left">
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <button
+              class="text-[20px] my-4 text-white bg-yellow-600 py-3 px-6 rounded-md hover:bg-white hover:text-black transition-all duration-200"
+            >
+              Book a Table
+            </button>
+          </div>
+
+          <!-- Hero Right -->
+          <div class="relative hidden md:block">
+            <img src="/assets/hero-burger-1ac00cb8.png" alt="" class="relative z-20" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Swipe Menu -->
+
+      <div
+        class="swipe-menu w-full"
+        style="background-color: hsl(38, 44%, 96%)"
+      >
+        <div
+          class="w-11/12 md:w-10/12 max-w-6xl mx-auto py-[10%] overflow-x-scroll flex gap-x-3"
+        >
+          <div
+            class="min-w-[240px] max-w-[300px] w-11/12 min-h-[600px] bg-white relative before:content-[''] before:absolute before:bg-orange-400 before:h-3/5 before:w-[150%] before:-bottom-40 before:-rotate-[20deg] overflow-hidden before:-left-9 rounded-lg before:p-10 group hover:before:h-full hover:before:rotate-0 hover:before:-left-4 hover:before:bottom-0 before:transition-all before:duration-200 flex flex-col justify-around items-center pt-12"
+          >
+            <img
+              src="/assets/promo-icon-1-094a5bfa.svg"
+              alt="promo-icon-1"
+              class="relative group-hover:hidden transition-all duration-200"
+            />
+            <img
+              src="/assets/promo-icon-11-7fcb1032.svg"
+              alt="promo-icon-11"
+              class="relative hidden group-hover:block transition-all duration-200"
+            />
+            <h1 class="font-bold text-[25px] group-hover:text-white z-[1]">
+              Mexican Pizza
+            </h1>
+            <p
+              class="text-gray-500 group-hover:text-white text-center px-6 z-[1]"
+            >
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <img
+              src="/assets/promo-1-1f081d12.png"
+              alt="promo-1"
+              class="relative my-10 w-10/12"
+            />
+          </div>
+
+          <div
+            class="min-w-[240px] max-w-[300px] w-11/12 min-h-[600px] bg-white relative before:content-[''] before:absolute before:bg-orange-400 before:h-3/5 before:w-[150%] before:-bottom-40 before:-rotate-[20deg] overflow-hidden before:-left-9 rounded-lg before:p-10 group hover:before:h-full hover:before:rotate-0 hover:before:-left-4 hover:before:bottom-0 before:transition-all before:duration-200 flex flex-col justify-around items-center pt-12"
+          >
+            <img
+              src="/assets/promo-icon-2-f30c8d28.svg"
+              alt="promo-icon-2"
+              class="relative z-1 group-hover:hidden transition-all duration-200"
+            />
+            <img
+              src="/assets/promo-icon-22-42a19eae.svg"
+              alt="promo-icon-22"
+              class="relative hidden group-hover:block z-10 transition-all duration-200"
+            />
+            <h1 class="font-bold text-[25px] group-hover:text-white z-[1]">
+              Soft Drinks
+            </h1>
+            <p
+              class="text-gray-500 group-hover:text-white z-[1] text-center px-6"
+            >
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <img
+              src="/assets/promo-2-438b0029.png"
+              alt="promo-1"
+              class="relative my-10 w-10/12"
+            />
+          </div>
+
+          <div
+            class="min-w-[240px] max-w-[300px] w-11/12 min-h-[600px] bg-white relative before:content-[''] before:absolute before:bg-orange-400 before:h-3/5 before:w-[150%] before:-bottom-40 before:-rotate-[20deg] overflow-hidden before:-left-9 rounded-lg before:p-10 group hover:before:h-full hover:before:rotate-0 hover:before:-left-4 hover:before:bottom-0 before:transition-all before:duration-200 flex flex-col justify-around items-center pt-12"
+          >
+            <img
+              src="/assets/promo-icon-3-6482b50f.svg"
+              alt="promo-icon-3"
+              class="relative z-1 group-hover:hidden transition-all duration-200"
+            />
+            <img
+              src="/assets/promo-icon-33-26ad88ef.svg"
+              alt="promo-icon-33"
+              class="relative hidden group-hover:block z-10 transition-all duration-200"
+            />
+            <h1 class="font-bold text-[25px] group-hover:text-white z-[1]">
+              French Fry
+            </h1>
+            <p
+              class="text-gray-500 group-hover:text-white z-[1] text-center px-6"
+            >
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <img
+              src="/assets/promo-3-627397eb.png"
+              alt="promo-1"
+              class="relative my-10 w-10/12"
+            />
+          </div>
+
+          <div
+            class="min-w-[240px] max-w-[300px] w-11/12 min-h-[600px] bg-white relative before:content-[''] before:absolute before:bg-orange-400 before:h-3/5 before:w-[150%] before:-bottom-40 before:-rotate-[20deg] overflow-hidden before:-left-9 rounded-lg before:p-10 group hover:before:h-full hover:before:rotate-0 hover:before:-left-4 hover:before:bottom-0 before:transition-all before:duration-200 flex flex-col justify-around items-center pt-12"
+          >
+            <img
+              src="/assets/promo-icon-4-11c75fdb.svg"
+              alt="promo-icon-4"
+              class="relative z-1 group-hover:hidden transition-all duration-200"
+            />
+            <img
+              src="/assets/promo-icon-44-0a949808.svg"
+              alt="promo-icon-44"
+              class="relative hidden group-hover:block z-10 transition-all duration-200"
+            />
+            <h1 class="font-bold text-[25px] group-hover:text-white z-[1]">
+              Burger Kingo
+            </h1>
+            <p
+              class="text-gray-500 group-hover:text-white z-[1] text-center px-6"
+            >
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <img
+              src="/assets/promo-4-d9da853f.png"
+              alt="promo-1"
+              class="relative my-10 w-10/12"
+            />
+          </div>
+
+          <div
+            class="min-w-[240px] max-w-[300px] w-11/12 min-h-[600px] bg-white relative before:content-[''] before:absolute before:bg-orange-400 before:h-3/5 before:w-[150%] before:-bottom-40 before:-rotate-[20deg] overflow-hidden before:-left-9 rounded-lg before:p-10 group hover:before:h-full hover:before:rotate-0 hover:before:-left-4 hover:before:bottom-0 before:transition-all before:duration-200 flex flex-col justify-around items-center pt-12"
+          >
+            <img
+              src="/assets/promo-icon-5-d16fda78.svg"
+              alt="promo-icon-5"
+              class="relative z-1 group-hover:hidden transition-all duration-200"
+            />
+            <img
+              src="/assets/promo-icon-55-4ff5d0c0.svg"
+              alt="promo-icon-55"
+              class="relative hidden group-hover:block z-10 transition-all duration-200"
+            />
+            <h1 class="font-bold text-[25px] group-hover:text-white z-[1]">
+              Chicken Masala
+            </h1>
+            <p
+              class="text-gray-500 group-hover:text-white z-[1] text-center px-6"
+            >
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+            <img
+              src="/assets/promo-5-f013d759.png"
+              alt="promo-1"
+              class="relative my-10 w-10/12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Discount Section -->
+
+      <div
+        class="w-11/12 md:w-10/12 max-w-6xl mx-auto flex flex-col md:flex-row items-center py-[12%] gap-x-12"
+      >
+        <!-- Left Section -->
+        <div class="relative w-full sm:w-3/4 md:w-full">
+          <img src="/assets/about-banner-d7acf883.png" alt="" class="w-full" />
+          <img
+            src="/assets/sale-shape-red-e601cb91.png"
+            alt=""
+            class="zoomer w-[45%] absolute left-[10%] top-0"
+          />
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full flex flex-col items-center md:items-start gap-y-4">
+          <h1 class="text-[40px] font-bold">
+            Caferio, Burgers, and Best Pizzas
+            <span class="text-[#dd9d2d]">in Town!</span>
+          </h1>
+          <p class="text-gray-500">
+            The restaurants in Hangzhou also catered to many northern Chinese
+            who had fled south from Kaifeng during the Jurchen invasion of the
+            1120s, while it is also known that many restaurants were run by
+            families.
+          </p>
+          <div class="flex items-center gap-x-2">
+            <div
+              class="rounded-full bg-[#dd9d2d] w-5 aspect-square flex justify-center items-center"
+            >
+              <i class="fa-solid fa-check text-white"></i>
+            </div>
+            <div>Delicious & Healthy Foods</div>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <div
+              class="rounded-full bg-[#dd9d2d] w-5 aspect-square flex justify-center items-center"
+            >
+              <i class="fa-solid fa-check text-white"></i>
+            </div>
+            <div>Spacific Family And Kids Zone</div>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <div
+              class="rounded-full bg-[#dd9d2d] w-5 aspect-square flex justify-center items-center"
+            >
+              <i class="fa-solid fa-check text-white"></i>
+            </div>
+            <div>Music & Other Facilities</div>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <div
+              class="rounded-full bg-[#dd9d2d] w-5 aspect-square flex justify-center items-center"
+            >
+              <i class="fa-solid fa-check text-white"></i>
+            </div>
+            <div>Fastest Food Home Delivery</div>
+          </div>
+
+          <button
+            class="bg-[#dd9d2d] py-2 px-8 rounded-sm font-bold text-white hover:bg-black hover:origin-bottom-left transition-all duration-300"
+          >
+            Order Now!
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Section -->
+
+      <div class="w-full py-[5%]" style="background-color: hsl(38, 44%, 96%)">
+        <div class="w-11/12 md:w-10/12 max-w-6xl mx-auto">
+          <h2 class="text-center text-red-600 font-bold">Popular Dishes</h2>
+
+          <div class="text-center font-bold text-5xl">
+            Our Delicious <span class="text-[#dd9d2d]">Food</span>
+          </div>
+
+          <p class="w-full mx-auto md:w-[36%] text-center py-6 text-gray-500">
+            Food is any substance consumed to provide nutritional support for an
+            organism.
+          </p>
+
+          <div class="w-full sm:w-3/4 max-w-3xl mx-auto">
+            <div
+              class="filterContainer flex justify-center items-center flex-wrap gap-8 py-8"
+            ></div>
+          </div>
+
+          <div
+            class="cardContainer flex flex-wrap justify-around gap-4 mx-auto"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Discount 2 Section -->
+
+      <div class="bg-[url('./Images/hero-bg.jpg')] py-10">
+        <div
+          class="w-11/12 md:w-10/12 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4"
+        >
+          <!-- Left Section -->
+
+          <div class="flex flex-col items-center md:items-start gap-y-4 w-full">
+            <h1
+              class="text-white text-[40px] font-bold text-center md:text-left"
+            >
+              The Foodie Have Excellent Of
+              <span class="text-[#dd9d2d]">Quality Burgers!</span>
+            </h1>
+            <p class="text-gray-200 text-center md:text-left">
+              The restaurants in Hangzhou also catered to many northern Chinese
+              who had fled south from Kaifeng during the Jurchen invasion of the
+              1120s, while it is also known that many restaurants were run by
+              families.
+            </p>
+
+            <button
+              class="bg-[#dd9d2d] py-2 px-8 rounded-sm font-bold text-white hover:bg-black hover:origin-bottom-left transition-all duration-300"
+            >
+              Order Now!
+            </button>
+          </div>
+
+          <!-- Right Section -->
+
+          <div class="relative w-full">
+            <img src="/assets/cta-banner-a7b04d33.png" alt="" class="mx-auto" />
+            <img
+              src="/assets/sale-shape-63b06475.png"
+              alt=""
+              class="zoomer w-[45%] absolute top-0 left-0"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Cycle Section -->
+
+      <div>
+        <div class="w-11/12 md:w-10/12 max-w-6xl mx-auto flex flex-col md:flex-row gap-4 items-center py-[5%]">
+          <!-- Left Part -->
+          <div class="relative z-10 w-full md:w-1/2 flex flex-col items-center md:items-start gap-y-4">
+            <h1
+              class="text-black text-[40px] font-bold text-center md:text-left"
+            >
+              A Moments Of Delivered On
+              <span class="text-[#dd9d2d]"> Right Time </span>
+              & Place
+            </h1>
+            <p class="text-gray-600 text-center md:text-left">
+              The restaurants in Hangzhou also catered to many northern Chinese
+              who had fled south from Kaifeng during the Jurchen invasion of the
+              1120s, while it is also known that many restaurants were run by
+              families.
+            </p>
+
+            <button
+              class="bg-[#dd9d2d] py-2 px-8 rounded-sm font-bold text-white hover:bg-black hover:origin-bottom-left transition-all duration-300"
+            >
+              Order Now!
+            </button>
+          </div>
+
+          <!-- Right Part -->
+          <div class="bg-[url('./Images/clouds.png')] bg-center bg-contain bg-no-repeat w-full md:w-1/2">
+            <img src="/assets/cycle-f647030d.svg" alt="" class="w-3/4 cycle" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reveiw Section -->
+      <div style="background-color: hsl(38, 44%, 96%)">
+        <div class="w-11/12 md:w-10/12 max-w-6xl mx-auto py-10">
+          <p class="text-center text-red-600 font-bold">Testimonials</p>
+
+          <h1 class="text-center font-bold text-5xl">
+            Our Customer <span class="text-[#dd9d2d]">Reviews</span>
+          </h1>
+
+          <p class="w-full mx-auto md:w-[36%] text-center py-6 text-gray-500">
+            Food is any substance consumed to provide nutritional support for an
+            organism.
+          </p>
+
+          <div
+            class="w-full sm:w-3/4 mx-auto rounded-2xl shadow-lg bg-white flex flex-col items-center gap-y-5 p-5"
+          >
+            <div class="flex items-center gap-x-10 xsm:flex-row flex-col">
+              <img src="" alt="" id="avatar" class="w-32 rounded-full" />
+
+              <div class="flex flex-col items-center xsm:items-start">
+                <h2 id="naam" class="font-bold text-xl"></h2>
+
+                <p id="role" class=""></p>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-quote-left text-2xl text-[#dd9d2d]"></i>
+
+            <p id="review" class="text-center"></p>
+
+            <i class="fa-solid fa-quote-right text-2xl text-[#dd9d2d]"></i>
+
+            <div class="flex items-center gap-x-4">
+              <button
+                id="left-btn"
+                class="bg-transparent hover:bg-[#dd9d2d] px-3 py-2 rounded-full transition-all duration-300 hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-left text-2xl"></i>
+              </button>
+              <button
+                id="right-btn"
+                class="bg-transparent hover:bg-[#dd9d2d] px-3 py-2 rounded-full transition-all duration-300 hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-right text-2xl"></i>
+              </button>
+            </div>
+
+            <button
+              id="surprise"
+              class="text-xl bg-transparent hover:bg-[#dd9d2d] px-3 py-2 rounded-full transition-all duration-300 hover:text-white"
+            >
+              Surprise Me
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Expand Section -->
+
+      <div class="w-full">
+        <div
+          class="w-11/12 md:w-10/12 max-w-6xl mx-auto py-10 h-[700px] hidden md:flex items-center gap-x-4"
+        >
+          <div
+            class="card bg-[url('./Images/banner-1.jpg')] h-full bg-no-repeat bg-center bg-cover w-2/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard flex flex-col items-start gap-y-4 p-8 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Itailian Pizzas
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card bg-[url('./Images/banner-2.jpg')] h-full bg-no-repeat bg-center bg-cover w-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious American Burgers
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card bg-[url('./Images/banner-3.jpg')] h-full bg-no-repeat bg-center bg-cover w-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Menu Items
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card bg-[url('./Images/banner-4.jpg')] h-full bg-no-repeat bg-center bg-cover w-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Chinese Foods
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-11/12 md:w-10/12 max-w-6xl mx-auto py-10 h-[1000px] md:hidden flex flex-col gap-y-4"
+        >
+          <div
+            class="card1 bg-[url('./Images/banner-1.jpg')] w-full bg-no-repeat bg-center bg-cover h-2/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard1 flex flex-col items-start gap-y-4 p-8 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Itailian Pizzas
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card1 bg-[url('./Images/banner-2.jpg')] w-full bg-no-repeat bg-center bg-cover h-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard1 flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious American Burgers
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card1 bg-[url('./Images/banner-3.jpg')] w-full bg-no-repeat bg-center bg-cover h-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard1 flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Menu Items
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card1 bg-[url('./Images/banner-4.jpg')] w-full bg-no-repeat bg-center bg-cover h-1/5 rounded-3xl transition-all duration-300"
+          >
+            <div
+              class="textCard1 flex flex-col items-start gap-y-4 p-8 opacity-0 transition-all duration-300"
+            >
+              <p class="text-white font-bold tracking-wide text-4xl">
+                50% Off Now!
+              </p>
+              <p class="text-white font-bold tracking-wide text-4xl">
+                Discount for Delicious Chinese Foods
+              </p>
+              <p class="text-gray-100 font-bold tracking-wide text-xl">
+                Sale off 50% only this week
+              </p>
+              <button
+                class="bg-orange-500 text-white text-lg px-3 py-2 hover:bg-black transition-all duration-200 rounded-lg"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Section -->
+
+      <div class="w-full py-6" style="background-color: hsl(38, 44%, 96%)">
+        <div class="w-11/12 md:w-10/12 max-w-6xl mx-auto">
+          <h2 class="text-center text-red-600 font-bold">Latest Blog Posts</h2>
+
+          <div class="text-center font-bold text-5xl">
+            This is all About <span class="text-[#dd9d2d]">Foods</span>
+          </div>
+
+          <p class="w-full mx-auto md:w-[36%] text-center py-6 text-gray-500">
+            Food is any substance consumed to provide nutritional support for an
+            organism.
+          </p>
+
+          <div
+            class="w-full max-w-xl md:w-3/4 mx-auto rounded-2xl shadow-lg bg-white flex flex-col items-center gap-y-5 p-5"
+          >
+            <figure class="relative">
+              <img src="" alt="" id="blogImage" class="rounded-2xl" />
+              <figcaption
+                id="blogCaption"
+                class="bg-[#dd6e2d] text-white font-bold w-fit px-4 py-1.5 rounded-lg absolute top-[8%] right-[7%]"
+              ></figcaption>
+            </figure>
+
+            <div
+              class="w-full flex justify-between font-mono flex-col items-center gap-y-3 xsm:flex-row"
+            >
+              <div class="flex items-center gap-x-2">
+                <i
+                  class="fa-regular fa-calendar-days text-[#dd9d2d] text-2xl"
+                ></i>
+                <p id="date" class="text-xl"></p>
+              </div>
+
+              <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-user text-[#dd9d2d] text-2xl"></i>
+                <p id="blogname" class="text-xl"></p>
+              </div>
+            </div>
+
+            <h2 id="head" class="text-3xl font-bold"></h2>
+
+            <p id="para" class="text-lg text-gray-500"></p>
+
+            <div class="w-full flex justify-between items-center gap-x-4">
+              <button
+                id="left-btn-blog"
+                class="bg-transparent hover:bg-[#dd9d2d] px-3 py-2 rounded-full transition-all duration-300 hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-left text-2xl"></i>
+              </button>
+              <button
+                id="right-btn-blog"
+                class="bg-transparent hover:bg-[#dd9d2d] px-3 py-2 rounded-full transition-all duration-300 hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-right text-2xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+
+      <div
+        class="overflow-hidden relative bg-[url('./Images/footer.png')] bg-no-repeat bg-contain bg-bottom w-full"
+      >
+        <div
+          class="relative z-10 w-11/12 md:w-10/12 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-[10%] pt-[5%]"
+        >
+          <div class="flex flex-col gap-y-4">
+            <a href="/" class="text-3xl font-bold"
+              >Foodie<span class="text-[#dd9d2d] text-5xl">.</span></a
+            >
+
+            <p class="text-gray-600">
+              Financial experts support or help you to to find out which way you
+              can raise your funds more.
+            </p>
+
+            <div class="flex items-center gap-x-2">
+              <a
+                href="#"
+                class="w-8 aspect-square bg-[#dd9d2d] flex justify-center items-center hover:bg-black transition-colors duration-300"
+              >
+                <i class="fa-brands fa-facebook text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 aspect-square bg-[#dd9d2d] flex justify-center items-center hover:bg-black transition-colors duration-300"
+              >
+                <i class="fa-brands fa-x-twitter text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 aspect-square bg-[#dd9d2d] flex justify-center items-center hover:bg-black transition-colors duration-300"
+              >
+                <i class="fa-brands fa-instagram text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 aspect-square bg-[#dd9d2d] flex justify-center items-center hover:bg-black transition-colors duration-300"
+              >
+                <i class="fa-brands fa-pinterest text-white"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-4">
+            <div class="text-2xl font-bold flex items-center gap-x-2">
+              Contact Info
+              <div class="w-6 h-1 bg-[#dd9d2d] mt-1 ml-2"></div>
+              <div class="w-2 h-1 bg-[#dd9d2d] mt-1"></div>
+            </div>
+
+            <p class="text-gray-600">+1 (062) 109-9222</p>
+
+            <p class="text-gray-600">Info@YourGmail24.com</p>
+
+            <p class="text-gray-600">
+              153 Williamson Plaza, Maggieberg, MT 09514
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-y-4">
+            <div class="text-2xl font-bold flex items-center gap-x-2">
+              Opening Hours
+
+              <div class="w-6 h-1 bg-[#dd9d2d] mt-1 ml-2"></div>
+              <div class="w-2 h-1 bg-[#dd9d2d] mt-1"></div>
+            </div>
+
+            <p class="text-gray-600">Monday-Friday: 08:00-22:00</p>
+
+            <p class="text-gray-600">Tuesday 4PM: Till Mid Night</p>
+
+            <p class="text-gray-600">Saturday: 10:00-16:00</p>
+          </div>
+        </div>
+
+        <div class="footCycle absolute w-full -bottom-1">
+          <img src="/assets/cycle-f647030d.svg" alt="" width="150px" />
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
